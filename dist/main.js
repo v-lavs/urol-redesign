@@ -21483,7 +21483,24 @@ $(document).ready(function () {
         jQuery('.backdrop').fadeOut();
     });
 
+    //HEADER ACTIVE
+    const header = document.querySelector('.header_home');
+    const firstSection = document.querySelector('.section-banner'); // твоя перша секція
 
+    const observer = new IntersectionObserver(
+        ([entry]) => {
+            if (!entry.isIntersecting) {
+                header.classList.add('active');
+            } else {
+                header.classList.remove('active');
+            }
+        },
+        {
+            threshold: 0.1
+        }
+    );
+
+    observer.observe(firstSection);
     //SLIDER
 
     if ($('.about-urolesan').get(0)) {

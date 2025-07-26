@@ -799,6 +799,7 @@ a:hover {
 body {
   font: 400 18px "Gilroy", sans-serif;
   height: 100%;
+  color: #4d594c;
   background-color: #f5f7f7;
 }
 
@@ -1155,6 +1156,7 @@ body {
 .menu__item {
   padding: 5px 12px;
   text-align: center;
+  flex-shrink: 0;
 }
 
 .menu__link {
@@ -1164,7 +1166,8 @@ body {
 
 .menu__link:hover,
 .menu__link:focus {
-  color: #1e1e1e;
+  -webkit-text-stroke: 0.5px #4d594c;
+  text-shadow: 0 0 8px 0 rgba(255, 255, 255, 0.5);
 }
 
 .swiper-container {
@@ -2128,24 +2131,43 @@ body {
   color: #ffffff;
 }
 
+.header_home .menu__link:hover,
+.header_home .menu__link:focus {
+  -webkit-text-stroke: 0.5px #ffffff;
+}
+
 .header_home .bg_frosted {
-  border: 1px solid #59CE57;
+  border: 1px solid #ffffff;
 }
 
 .header_home .bg_frosted:before {
   background: rgba(255, 255, 255, 0.2);
 }
 
+.header_home .bg_frosted .header__logo {
+  filter: brightness(1000%) saturate(0%);
+}
+
 .header_home.active .menu {
   color: #4d594c;
 }
 
+.header_home.active .menu__link:hover,
+.header_home.active .menu__link:focus {
+  -webkit-text-stroke: 0.5px #4d594c;
+  text-shadow: 0 0 8px 0 rgba(255, 255, 255, 0.5);
+}
+
 .header_home.active .bg_frosted {
-  border: 1px solid #ffffff;
+  border: 1px solid #59CE57;
 }
 
 .header_home.active .bg_frosted:before {
   background: rgba(63, 165, 53, 0.1);
+}
+
+.header_home.active .header__logo {
+  filter: none;
 }
 
 .header__nav {

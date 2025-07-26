@@ -44,25 +44,45 @@
   &_home {
     .menu{
       color: variables.$white;
+      &__link{
+        &:hover,
+        &:focus {
+          -webkit-text-stroke: .5px variables.$white;
+
+        }
+      }
     }
     .bg_frosted {
-      border: 1px solid variables.$green;
+      border: 1px solid variables.$white;
 
       &:before {
         background: rgba(255, 255, 255, 0.2);
+      }
+      .header__logo{
+        filter: brightness(1000%) saturate(0%);
       }
     }
 
     &.active {
       .menu{
         color: #4d594c;
+        &__link{
+          &:hover,
+          &:focus {
+            -webkit-text-stroke: .5px variables.$main-color;
+            text-shadow: 0 0 8px 0 rgba(255, 255, 255, 0.5);
+          }
+        }
       }
       .bg_frosted {
-        border: 1px solid variables.$white;
+        border: 1px solid variables.$green;
 
         &:before {
           background: rgba(63, 165, 53, 0.1);
         }
+      }
+      .header__logo{
+        filter: none;
       }
     }
   }
