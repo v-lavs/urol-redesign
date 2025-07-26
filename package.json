@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "Easy start to build WP and HTML themes",
   "scripts": {
-    "start": "gulp clean && gulp default",
-    "build": "gulp clean && gulp build"
+    "start": "node --max-old-space-size=4096 node_modules/gulp/bin/gulp.js default",
+    "build": "gulp build"
   },
   "author": "vLavs",
   "license": "ISC",

@@ -11,6 +11,7 @@
     <meta name="yandex" content="none">
 
     <title>Головна</title>
+    <link rel="stylesheet" href="./lib/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="./fonts/fonts.css">
     <link rel="stylesheet" href="./dist/main.css">
 </head>
@@ -19,10 +20,10 @@
 <div class="wrapper">
     <header class="header">
 
-        <div class="container bg_frosted">
-            <div class="container-inner">
+        <div class="container ">
+            <div class="container-inner bg_frosted">
                 <a href="index.html" class="header__logo">
-                    <img class="header__logo-img" src="assets/img/svg/logo-site.svg" alt="">
+                    <img class="header__logo-img" src="assets/img/svg/logo-site-w.svg" alt="">
                 </a>
                 <nav class="header__nav">
                     <div class="header__nav-inner">
@@ -49,11 +50,6 @@
                             </li>
                         </ul>
                         <div class="header__nav-bar">
-                            <div class="switch-lang">
-                                <a href="#" class="switch-lang__link active-lang">Укр</a>
-                                <a href="#" class="switch-lang__link">Рус</a>
-                            </div>
-
                             <ul class="social-list">
                                 <li class="social-list__item">
                                     <a href="#" class="social-list__link">
@@ -72,11 +68,9 @@
                     </div>
                 </nav>
 
-                <div class="switch-lang">
-                    <a href="#" class="switch-lang__link">Укр</a>
-                </div>
-                <a href="#" class="header__logo-site">
-                    <img src="assets/img/svg/logo-arterium.svg" alt="логотип arterium">
+                <a href="https://tabletki.ua/uk/%D0%A3%D1%80%D0%BE%D0%BB%D0%B5%D1%81%D0%B0%D0%BD/" class="btn btn_buy">
+                    <img src="assets/img/svg/icon-cart.svg" alt="">
+                    <span class="buy_text">Купити</span>
                 </a>
                 <button type="button" class="btn-burger" aria-label="бургер-меню">
                     <span class="line"></span>
@@ -91,7 +85,7 @@
 
     <div class="backdrop"></div>
     <main class="main  home">
-        <section class=" section-banner" style="background-image: url(assets/img/3.jpg);">
+        <section class=" section-banner" style="background-image: url(assets/img/hero-section-bg.jpg);">
             <div class="bg-effect" style="background-image: url(assets/img/2.png);">
                 <div class="bg-effect-gif"></div>
                 <div class="bg-effect-1"></div>
@@ -440,32 +434,6 @@
             </div>
 
         </section>
-
-        <section class="section-members">
-            <ul class="members-list">
-                <li class="members-list__item">
-                    <img class="member-img" src="assets/img/doctor1.jpg" alt="">
-                </li>
-                <li class="members-list__item">
-                    <img class="member-img" src="assets/img/doctor2.jpg" alt="">
-                </li>
-                <li class="members-list__item">
-                    <img class="member-img" src="assets/img/doctor3.jpg" alt="">
-                </li>
-            </ul>
-            <div class="section-members__bg">
-                <div class="section-members__content">
-                    <h2 class="section__title">Для спеціалістів</h2>
-                    <div class="section__sub-title">
-                        Цей розділ сайту містить видання зі спеціалізованою професійною інформацією, призначених
-                        виключно для медичних та фармацевтичних працівників.
-                    </div>
-                    <div class="wrap-btn">
-                        <a href="blog.html" class="bg-change btn btn_main">Детальніше</a>
-                    </div>
-                </div>
-            </div>
-        </section>
     </main>
     <div class="popup">
         <h5 class="popup__title heading_h1">Підтвердити перехід
@@ -549,6 +517,12 @@
     </footer>
 </div>
 
+<script
+        src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+        crossorigin="anonymous"></script>
+<script src="./lib/swiper/swiper-bundle.min.js"></script>
+<script src="./lib/waypoints/index.js"></script>
 <script src="dist/main.js"></script>
 </body>
 </html>
