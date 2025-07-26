@@ -1,0 +1,124 @@
+@use "../utils/mixins";
+@use "../utils/variables";
+
+.heading {
+  font-weight: 700;
+
+  &_xxl {
+    font-size: 56px;
+  }
+
+  &_xl {
+    font-size: 42px;
+  }
+
+  &_h1 {
+    font-size: 36px;
+  }
+
+  &_h2 {
+    font-size: 32px;
+  }
+
+  &_h3 {
+    font-size: 24px;
+  }
+
+  &_h4 {
+    font-size: 22px;
+  }
+
+  &_h5 {
+    font-size: 18px;
+  }
+
+  &_h6 {
+    font-size: 14px;
+  }
+}
+
+//---------
+.text {
+  &_xl {
+    font-size: 48px;
+  }
+
+  &_lg {
+    font-size: 36px;
+  }
+
+  &_md {
+    font-size: 22px;
+  }
+
+  &-sm {
+    font-size: 16px;
+  }
+
+  &-xs {
+    font-size: 14px;
+  }
+}
+
+@include mixins.respond-to(variables.$lg) {
+  .heading_h1{
+    font-size: 25px;
+  }
+
+}
+@include mixins.respond-to(variables.$md) {
+  .heading {
+    &_xxl {
+      font-size: 43px;
+    }
+  }
+  .heading_h4{
+    font-size: 18px;
+  }
+  .text_md{
+    font-size: 18px;
+  }
+}
+@include mixins.respond-to(variables.$sm) {
+  .heading {
+    &_xxl {
+      font-size: 39px;
+    }
+  }
+}
+@include mixins.respond-to(variables.$xs) {
+  .heading {
+      &_h1 {
+        font-size: 24px;
+      }
+  }
+  .text_md{
+    font-size: 16px;
+  }
+}
+
+@include mixins.respond-to(variables.$xxs) {
+  .heading {
+     &_xxl {
+       font-size: 24px;
+     }
+
+     &_h1 {
+       font-size: 18px;
+     }
+    &_4{
+      font-size: 16px;
+    }
+   }
+  .text_md{
+    font-size: 16px;
+  }
+}
+
+
+
+
+
+
+
+

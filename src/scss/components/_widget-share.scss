@@ -1,0 +1,94 @@
+@use "../utils/mixins";
+@use "../utils/variables";
+
+.info-sticky {
+  position: sticky;
+  height: 0;
+  transform: translate(-150px, 0);
+  left: -100%;
+  top: 410px;
+  width: 32px;
+  padding: 4px;
+  background-color: transparent;
+  z-index: 20;
+
+  .inner-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 78px;
+  }
+
+  .widget-share {
+    width: 32px;
+
+    &__item {
+      margin-bottom: 17px;
+    }
+
+    &__link {
+      display: block;
+
+      &:hover,
+      &:focus {
+        .change-colors {
+          fill: variables.$blue;
+        }
+
+        .stroke-color {
+          stroke: variables.$blue;
+        }
+      }
+    }
+
+    .print {
+      padding-top: 23px;
+    }
+
+    .icon {
+      svg {
+        width: 24px;
+        height: 24px;
+        transition: .35s;
+      }
+    }
+
+  }
+
+  @include mixins.respond-to(variables.$lg) {
+    -webkit-transform: translateX(-90px);
+    -moz-transform: translateX(-90px);
+    -ms-transform: translateX(-90px);
+    -o-transform: translateX(-90px);
+    transform: translateX(-90px);
+  }
+  @include mixins.respond-to(variables.$lg) {
+    display: none;
+  }
+}
+
+.post-date {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  line-height: .5;
+  padding: 15px 5px;
+  width: 76px;
+  height: 78px;
+  background: variables.$black-blue;
+  font-weight: 700;
+  color: #ffffff;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 109px;
+
+  .day {
+    font-size: 36px;
+  }
+
+  .mounts {
+    font-size: 14px;
+  }
+}

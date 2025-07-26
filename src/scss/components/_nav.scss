@@ -1,0 +1,35 @@
+@use "../utils/mixins";
+@use "../utils/variables";
+
+.menu {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  font-size: 18px;
+  align-items: center;
+  line-height: 1;
+  color: variables.$black-blue;
+  &__item {
+    padding: 5px 22px;
+    text-align: center;
+  }
+
+  &__link {
+    display: inline-block;
+    transition: .35s;
+
+    &:hover,
+    &:focus {
+      -webkit-text-stroke: .5px variables.$black-blue;
+      text-shadow: 0 0 2px #D8E7F2;
+    }
+  }
+}
+
+@include mixins.respond-to(variables.$md) {
+
+    .menu__item {
+      padding-left: 16px;
+      padding-right: 16px;
+  }
+}

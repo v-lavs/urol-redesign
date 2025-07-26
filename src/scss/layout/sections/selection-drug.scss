@@ -1,0 +1,181 @@
+@use "../../utils/mixins";
+@use "../../utils/variables";
+
+.selection-drug {
+  padding-bottom: 142px;
+  overflow: hidden;
+
+  .bg-section {
+    position: relative;
+    padding-top: 188px;
+  }
+
+  .pills {
+    position: absolute;
+    z-index: 0;
+    transition: 2s transform;
+
+    img {
+      width: 100%;
+    }
+
+    &.anim-pills {
+      transform: rotate(70deg);
+      transition: 2s transform;
+    }
+
+    &-1 {
+      left: 21.25%;
+      top: 9.5%;
+      width: 71px;
+      height: 73px;
+    }
+
+    &-2 {
+      right: 21.25%;
+      top: 10.75%;
+      width: 62px;
+      height: 57px;
+    }
+
+    &-3 {
+      width: 130px;
+      height: 97px;
+      right: 4.5%;
+      top: 36%;
+    }
+
+    &-4 {
+      width: 255px;
+      height: 259px;
+      left: 1.5%;
+      bottom: 14%;
+    }
+
+    &-5 {
+      width: 73px;
+      height: 58px;
+      bottom: 9.5%;
+      right: 35%;
+    }
+
+    &-6 {
+      width: 236px;
+      height: 211px;
+      top: 14%;
+      left: -6.5%;
+    }
+
+    &-7 {
+      width: 200px;
+      height: 197px;
+      right: -5%;
+      bottom: 10%;
+    }
+  }
+
+  .section__heading {
+    margin-bottom: 46px;
+
+    &:after {
+      border-image: linear-gradient(to right, rgba(59, 178, 57, 0), #3BB239, rgba(59, 178, 57, 0)) 0 0 100% 0;
+    }
+  }
+
+  .section__text {
+    text-align: center;
+    color: #909090;
+  }
+
+  .small {
+    display: block;
+  }
+
+  .drugs-list {
+    max-width: 1122px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto 110px;
+
+    &__item {
+      width: 33.33%;
+    }
+  }
+
+  @media all and (max-width: 1480px) {
+    .pills {
+
+      &-3 {
+        width: 107px;
+        height: 80px;
+        right: -1.5%;
+      }
+
+      &-4 {
+        width: 189px;
+        height: 178px;
+        left: -5.5%;
+      }
+
+    }
+    .pills-bg-l {
+      width: 109px;
+      height: 161px;
+    }
+    .pills-bg-r {
+      width: 99px;
+      height: 168px;
+      bottom: 18%;
+    }
+  }
+
+  @include mixins.respond-to(variables.$md) {
+    .bg-section {
+      padding-top: 0;
+    }
+    .drugs-list {
+      margin-bottom: 24px;
+    }
+    .drugs-list__item {
+      width: 50%;
+      margin-bottom: 50px;
+    }
+    .pills-1 {
+      left: 10.25%;
+      top: 1.5%;
+    }
+    .pills-2 {
+      right: 2.25%;
+      top: 2.75%;
+    }
+    .pills-3,
+    .pills-4,
+    .pills-bg {
+      display: none;
+    }
+  }
+
+  @include mixins.respond-to(variables.$sm) {
+    .pills {
+      display: none;
+    }
+  }
+
+  @include mixins.respond-to(variables.$xs) {
+    padding-bottom: 49px;
+
+    .drugs-list__item {
+      width: 100%;
+    }
+    .text_sm {
+      font-size: 14px;
+    }
+  }
+
+  @include mixins.respond-to(variables.$xxs) {
+    .drugs-list__item {
+      margin-bottom: 30px;
+    }
+  }
+
+}

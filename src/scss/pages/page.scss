@@ -1,0 +1,279 @@
+@use "../utils/mixins";
+@use "../utils/variables";
+
+.page {
+  background-color: #f5f6f6;
+  padding-top: 208px;
+
+  &__heading {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1269px;
+    margin: 0 auto 120px;
+    width: 100%;
+    border: 1px solid #ffffff;
+    border-radius: 15px;
+    min-height: 184px;
+    padding: 47px 47px 47px 105px;
+    overflow: hidden;
+
+    @supports (backdrop-filter: none) {
+      &.frosted {
+        backdrop-filter: blur(5px);
+      }
+    }
+
+    .toggle-content {
+      position: relative;
+      width: 100%;
+      margin-top: 60px;
+      padding-top: 38px;
+      margin-bottom: 0;
+
+      &:before {
+        position: absolute;
+        content: '';
+        display: block;
+        background-color: #ffffff;
+        height: 1px;
+        width: 150vw;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 0;
+      }
+
+      .btn {
+        border: none;
+        padding: 10px 10px 21px;
+      }
+
+      .block-more-info {
+        padding-top: 7px;
+        padding-bottom: 50px;
+
+        &:before {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &__title {
+    position: relative;
+    width: 33%;
+    padding: 0 32px;
+    color: variables.$blue-100;
+    line-height: 1;
+    flex-shrink: 0;
+    min-height: 90px;
+    display: inline-flex;
+    align-items: center;
+
+    &:before {
+      position: absolute;
+      content: '';
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+      width: 7px;
+      height: 90px;
+      background-color: variables.$blue-100;
+      z-index: 1;
+    }
+  }
+
+  &__sub-title {
+    width: 67%;
+  }
+
+  .link-back {
+    display: none;
+    position: relative;
+    z-index: 2;
+    margin-bottom: 14px;
+    color: variables.$blue-100;
+
+    svg {
+      display: inline-block;
+      vertical-align: middle;
+      width: 24px;
+      height: 24px;
+
+      path {
+        stroke: variables.$blue-100;
+      }
+    }
+  }
+
+
+  @include mixins.respond-to(variables.$lg) {
+    &__heading {
+      min-height: 150px;
+      padding: 26px 25px 25px 40px;
+    }
+  }
+  @include mixins.respond-to(variables.$sm) {
+    padding-top: 160px;
+    &__heading {
+      flex-wrap: wrap;
+      flex-direction: column;
+      padding-left: 64px;
+      margin-bottom: 60px;
+    }
+    &__title,
+    &__sub-title {
+      width: 100%;
+    }
+    &__title {
+      min-height: 52px;
+      padding: 0;
+      margin-bottom: 25px;
+
+      &:before {
+        width: 4px;
+        height: 50px;
+        left: -18px;
+      }
+    }
+  }
+  @include mixins.respond-to(variables.$xs) {
+    padding-top: 110px;
+
+    .link-back {
+      display: block;
+      margin-bottom: 25px;
+    }
+    &__title {
+      padding-left: 14px;
+      margin-bottom: 14px;
+
+      &:before {
+        left: 0;
+      }
+    }
+  }
+  @include mixins.respond-to(variables.$xxs) {
+    &__heading {
+      padding: 32px 34px;
+    }
+    &__title {
+      min-height: 40px;
+
+    }
+  }
+}
+
+.page-product {
+  padding-top: 134px;
+
+  .link-back {
+    position: relative;
+    z-index: 2;
+    margin-bottom: 14px;
+    color: variables.$blue-100;
+
+    svg {
+      display: inline-block;
+      vertical-align: middle;
+      width: 24px;
+      height: 24px;
+
+      path {
+        stroke: variables.$blue-100;
+      }
+    }
+  }
+
+  @include mixins.respond-to(variables.$xs) {
+    padding-top: 110px;
+    .link-back {
+      margin-bottom: 25px;
+    }
+  }
+}
+
+.page-pyelonephritis {
+  .types-disease {
+    .disease-list__text {
+      padding-top: 26px;
+      color: variables.$blue-100;
+      font-size: 28px;
+      font-weight: 700;
+      line-height: 1.1;
+    }
+  }
+
+  .symptoms {
+    padding-bottom: 150px;
+  }
+
+  @include mixins.respond-to(variables.$lg) {
+    .types-disease {
+      .disease-list__text {
+        font-size: 20px;
+      }
+    }
+  }
+  @include mixins.respond-to(variables.$md) {
+    .types-disease {
+      .disease-list__text {
+        font-size: 18px;
+      }
+    }
+  }
+  @include mixins.respond-to(variables.$sm) {
+    .symptoms {
+      padding-bottom: 80px;
+    }
+  }
+  @include mixins.respond-to(variables.$xs) {
+    .types-disease {
+      .disease-list__text {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+.cystitis {
+  .symptoms {
+    padding-bottom: 0;
+  }
+
+  .section-reason {
+    padding-top: 90px;
+  }
+
+  @include mixins.respond-to(variables.$xs) {
+    .section-reason {
+      padding-top: 40px;
+    }
+  }
+}
+
+.sand-kidney {
+  .section-reason {
+    padding-top: 0;
+    position: relative;
+
+    &:before {
+      position: absolute;
+      content: '';
+      background: linear-gradient(to top, #f5f6f6, transparent);
+      height: 100px;
+      left: 0;
+      right: 0;
+      top: -100px;
+    }
+  }
+}
+
+.blog {
+  padding-top: 134px;
+  @include mixins.respond-to(variables.$xs) {
+    .link-back {
+      margin-bottom: 25px;
+    }
+  }
+}

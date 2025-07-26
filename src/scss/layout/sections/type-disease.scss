@@ -1,0 +1,214 @@
+@use "../../utils/mixins";
+@use "../../utils/variables";
+
+.disease{
+  padding-bottom: 108px;
+  padding-top: 60px;
+  background-color: #f5f7f7;
+}
+
+.types-disease {
+  &__inner {
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  &__header {
+    position: relative;
+    background: #FFFFFF;
+    box-shadow: 0 0 45px rgba(188, 229, 251, 0.75);
+    padding: 47px 30px 110px;
+    border-radius: 130px;
+    line-height: 1.2;
+
+    &:before{
+      position: absolute;
+      content: '';
+      background-repeat: no-repeat;
+      background-position: center;
+      -webkit-background-size: contain;
+      background-size: contain;
+      width: 10%;
+      height: 58%;
+      background-image: url(../assets/img/hexagon.png);
+      left: -50px;
+      top: -50px;
+      z-index: 0;
+    }
+  }
+
+  &__heading {
+    max-width: 580px;
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+    font-weight: 400;
+    color: variables.$green-100;
+
+    .strong {
+      font-size: 1.2em;
+      font-weight: 700;
+    }
+  }
+
+  @include mixins.respond-to(variables.$lg) {
+    &__inner {
+      width: 80%;
+    }
+    &__header {
+      padding-bottom: 60px;
+    }
+  }
+  @include mixins.respond-to(variables.$md) {
+    &__heading {
+      max-width: 480px;
+      width: 100%;
+    }
+  }
+  @include mixins.respond-to(variables.$xs) {
+    &__header {
+      width: 100%;
+      padding: 0;
+      background-color: transparent;
+      box-shadow: none;
+      margin-bottom: 30px;
+      font-size: 20px;
+      &:before{
+        display: none;
+      }
+    }
+  }
+}
+
+.disease-list {
+  display: flex;
+  justify-content: center;
+  margin-top: -80px;
+
+  &__item {
+    width: 30.33%;
+    text-align: center;
+    background-color: transparent;
+    padding: 0 25px;
+
+    &:nth-of-type(2n) {
+      .disease-bg {
+        background-image: url(../assets/img/svg/ureterolithiasis.svg),
+        linear-gradient(180deg, #F0F83C -10.73%, #2FA02D 118.64%);
+      }
+    }
+
+    &:nth-of-type(3n) {
+      .disease-bg {
+        background-image: url(../assets/img/svg/cystolithiasis.svg),
+        linear-gradient(180deg, #F0F83C -10.73%, #2FA02D 118.64%);
+      }
+    }
+
+  }
+
+  &__icon {
+    position: relative;
+    padding-bottom: 88px;
+
+    &:before {
+      position: absolute;
+      content: '';
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 15px;
+      height: 88px;
+      background-image: url(../assets/img/svg/decor-card-disease.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+    }
+  }
+
+  .disease-bg {
+    width: 190px;
+    height: 190px;
+    margin: 0 auto;
+    border-radius: 50%;
+    border: 22px solid #ffffff;
+    box-shadow: 0px 0px 25px rgba(188, 229, 251, 0.75);
+    background-image: url(../assets/img/svg/nephrolitithiasis.svg),
+    linear-gradient(180deg, #F0F83C -10.73%, #2FA02D 118.64%);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 88px 68px, contain;
+  }
+
+  &__title {
+    text-transform: uppercase;
+    padding-top: 25px;
+    padding-bottom: 15px;
+    color: #0088EC;
+  }
+
+  @include mixins.respond-to(variables.$lg) {
+    margin-top: -50px;
+    &__title {
+      padding-top: 15px;
+      font-size: 22px;
+    }
+    &__icon {
+      padding-bottom: 60px;
+
+      &:before {
+        height: 60px;
+      }
+    }
+    .disease-bg {
+      width: 100px;
+      height: 100px;
+      border-width: 12px;
+      background-size: 50px 45px, contain;
+    }
+  }
+  @include mixins.respond-to(variables.$sm) {
+    flex-wrap: wrap;
+    justify-content: center;
+
+    &__item {
+      width: 50%;
+      max-width: 230px;
+      margin-bottom: 25px;
+    }
+    &__icon {
+      padding-bottom: 25px;
+
+      &:before {
+        height: 35px;
+        bottom: -10px;
+      }
+    }
+    &__title {
+      font-size: 20px;
+      padding-bottom: 5px;
+    }
+  }
+  @include mixins.respond-to(variables.$xs) {
+    margin-top: 0;
+
+    &__icon {
+      padding-bottom: 0;
+      &:before {
+        display: none;
+      }
+    }
+    &__title {
+      font-size: 18px;
+    }
+
+  }
+  @include mixins.respond-to(variables.$xxs) {
+    &__item{
+      width: 100%;
+      margin: 0 auto 25px;
+      max-width: 174px;
+    }
+  }
+}

@@ -1,0 +1,48 @@
+@use 'utils/variables';
+@use 'utils/mixins';
+
+@use '../lib/swiper/swiper-bundle.min';
+
+@use 'base/reset';
+@use 'base/base';
+@use 'base/typography';
+
+@use 'components/button';
+@use 'components/nav';
+@use 'components/slider';
+@use 'components/pagination';
+@use 'components/widget-share';
+@use 'components/toggle-content';
+@use 'components/card-post';
+@use 'components/card-drug';
+@use 'components/types-cystitis';
+@use 'components/card-author';
+@use 'components/prevention__list';
+@use 'components/popup';
+
+
+
+@use 'layout/layout';
+@use 'layout/grid';
+@use 'layout/header';
+@use 'layout/footer';
+@use 'layout/sections/section-banner';
+@use 'layout/sections/section-help';
+@use 'layout/sections/section-slider';
+@use 'layout/sections/section-reason';
+@use 'layout/sections/symptoms';
+@use 'layout/sections/consequences';
+@use 'layout/sections/type-disease';
+@use 'layout/sections/section-related-post';
+@use 'layout/sections/section-members';
+@use 'layout/sections/selection-drug';
+
+
+@use 'pages/blog';
+@use 'pages/single-article';
+@use 'pages/page-effectiviness';
+@use 'pages/page-composition';
+@use 'pages/page';
+
+
+

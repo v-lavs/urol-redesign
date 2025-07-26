@@ -1,0 +1,110 @@
+@use "../../utils/mixins";
+@use "../../utils/variables";
+
+.symptoms {
+  padding-bottom: 60px;
+}
+
+.symptoms-list {
+  margin: 0 auto;
+  max-width: 1080px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-bottom: 90px;
+  &__item {
+    position: relative;
+    display: flex;
+    padding: 35px 17px 52px 46px;
+    max-width: 360px;
+    width: 33.33%;
+    background: transparent;
+    align-items: center;
+
+    &:nth-child(2):before,
+    &:nth-child(2):after {
+      position: absolute;
+      content: '';
+      width: 35px;
+      height: 35px;
+      background-image: url(../assets/img/svg/plus.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      bottom: 0;
+      z-index: 1;
+    }
+
+    &:nth-child(2):before {
+      left: 0;
+      transform: translate(-50%, 50%);
+    }
+
+    &:nth-child(2):after {
+      right: 0;
+      transform: translate(50%, 50%);
+    }
+  }
+
+  &__bg-icon {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 100px;
+    width: 100px;
+    flex-shrink: 0;
+  }
+
+  &__text {
+    padding-left: 25px;
+  }
+  @include mixins.respond-to(variables.$lg){
+    &__item{
+      padding: 35px 17px 26px 17px;
+    }
+    &__bg-icon{
+      height: 70px;
+      width: 70px;
+    }
+    &__text{
+      font-size: 16px;
+      padding-left: 15px;
+    }
+  }
+  @include mixins.respond-to(variables.$sm){
+    padding-bottom: 40px;
+    &__bg-icon{
+      width: 54px;
+      height: 54px;
+      margin-bottom: 7px;
+    }
+    &__item{
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 30px 17px;
+    }
+    &__text{
+      padding-left: 0;
+    }
+  }
+  @include mixins.respond-to(variables.$xs){
+
+    &__item{
+      width: 50%;
+      &:before,
+      &:after{
+        display: none;
+      }
+    }
+  }
+  @include mixins.respond-to(variables.$xxs){
+
+    &__item{
+      padding-bottom: 10px;
+      width: 100%;
+      max-width: 210px;
+    }
+  }
+}

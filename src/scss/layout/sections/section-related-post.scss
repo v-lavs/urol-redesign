@@ -1,0 +1,40 @@
+@use "../../utils/mixins";
+@use "../../utils/variables";
+
+.section-related-post {
+  .section__header {
+    border-bottom: 1px solid #C8C8C8;
+    padding-bottom: 20px;
+    margin-bottom: 14px;
+  }
+  @include mixins.respond-to(variables.$xs) {
+    .section__header {
+      margin-bottom: 31px;
+    }
+  }
+}
+
+.related-post {
+  padding-bottom: 0;
+
+  .card-post {
+    max-width: 308px;
+
+    &__date {
+      font-size: 13px;
+      font-family: variables.$secondary-font;
+    }
+
+    &__thumb {
+      min-height: 143px;
+    }
+  }
+
+  @include mixins.respond-to(variables.$md) {
+    .post-list__item {
+      width: 50%;
+      padding-bottom: 15px;
+    }
+  }
+
+}
