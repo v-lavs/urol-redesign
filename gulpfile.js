@@ -93,12 +93,12 @@ function watchJs() {
 
 // Build and development tasks
 const build = gulp.series(clean, gulp.parallel(jsBuild, styleBuild));
-const dev = gulp.series(clean, gulp.parallel(styleDev));
-const watch = gulp.parallel( watchJs);
+const dev = gulp.series(clean, gulp.parallel(jsDev, styleDev));
+const watch = gulp.parallel(watchStyles, watchJs);
 
 // Register tasks
 gulp.task('clean', clean);
 gulp.task('build', build);
 gulp.task('dev', dev);
 gulp.task('watch', watch);
-gulp.task('default', gulp.series(dev));
+gulp.task('default', gulp.series(dev, watch));

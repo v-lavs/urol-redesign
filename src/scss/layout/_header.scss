@@ -9,13 +9,13 @@
   right: 0;
   z-index: 999;
   font-size: 16px;
-  color: variables.$black-blue;
+  color: variables.$white;
 
   .bg_frosted {
     position: relative;
     border: 1px solid variables.$white;
     border-radius: 15px;
-    padding: 29px 44px;
+    padding: 20px 24px;
     overflow: hidden;
     background-color: transparent;
 
@@ -38,7 +38,7 @@
       right: 0;
       background: rgba(255, 255, 255, 0.2);
       backdrop-filter: blur(12px);
-      z-index: 2;
+      z-index: -1;
     }
   }
 
@@ -47,29 +47,8 @@
   }
 
   &__logo {
-    position: relative;
     display: block;
-    max-width: 202px;
-    padding-right: 47px;
-
-    &:after {
-      position: absolute;
-      content: '';
-      display: block;
-      right: 0;
-      top: 50%;
-      transform: translateY(-50%);
-      background-color: variables.$white;
-      width: 1px;
-      height: 46px;
-      z-index: 1;
-    }
-  }
-
-  &__logo-site {
-    display: block;
-    max-width: 132px;
-    margin-left: 48px;
+    max-width: 160px;
   }
 
   .btn-burger {
@@ -119,6 +98,23 @@
 
   .switch-lang {
     margin-left: 20px;
+  }
+
+  .btn_buy{
+    display: flex;
+    align-items: center;
+    font-family: variables.$secondary-font;
+    font-size: 16px;
+    color: #fff;
+    box-shadow: 0 4px 13px 0 #3fa535;
+    background: linear-gradient(135deg, #3fa535 0%, #c8e514 100%);
+    padding: 12px 24px;
+    width: 149px;
+    img{
+      width: 32px;
+      display: block;
+      margin-right: 16px;
+    }
   }
 
   @media all and (max-width: 1340px) {
