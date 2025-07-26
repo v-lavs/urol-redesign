@@ -797,7 +797,7 @@ a:hover {
 }
 
 body {
-  font: 400 18px "Calibri", sans-serif;
+  font: 400 18px "Gilroy", sans-serif;
   height: 100%;
   background-color: #f5f7f7;
 }
@@ -1149,7 +1149,7 @@ body {
   font-weight: 500;
   align-items: center;
   line-height: 1;
-  color: #ffffff;
+  color: #4d594c;
 }
 
 .menu__item {
@@ -1514,7 +1514,6 @@ body {
 
 .card-post__link {
   position: relative;
-  font-family: "Gilroy", sans-serif;
   font-weight: 600;
   font-size: 16px;
   color: #0088EC;
@@ -2076,10 +2075,6 @@ body {
   color: #ffffff;
 }
 
-.home {
-  background-color: #eeeeee;
-}
-
 .container {
   width: 100%;
   max-width: 1200px;
@@ -2109,7 +2104,7 @@ body {
 
 .header .bg_frosted {
   position: relative;
-  border: 1px solid #ffffff;
+  border: 1px solid #59CE57;
   border-radius: 16px;
   padding: 20px 24px;
   overflow: hidden;
@@ -2123,10 +2118,34 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(63, 165, 53, 0.1);
   -webkit-backdrop-filter: blur(16px);
   backdrop-filter: blur(16px);
   z-index: -1;
+}
+
+.header_home .menu {
+  color: #ffffff;
+}
+
+.header_home .bg_frosted {
+  border: 1px solid #59CE57;
+}
+
+.header_home .bg_frosted:before {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.header_home.active .menu {
+  color: #4d594c;
+}
+
+.header_home.active .bg_frosted {
+  border: 1px solid #ffffff;
+}
+
+.header_home.active .bg_frosted:before {
+  background: rgba(63, 165, 53, 0.1);
 }
 
 .header__nav {
@@ -2186,7 +2205,6 @@ body {
 .header .btn_buy {
   display: flex;
   align-items: center;
-  font-family: "Calibri", sans-serif;
   font-size: 16px;
   color: #fff;
   box-shadow: 0 4px 13px 0 #3fa535;
@@ -3170,7 +3188,7 @@ body {
   margin: 0 auto;
   border-radius: 50%;
   border: 22px solid #ffffff;
-  box-shadow: 0px 0px 25px rgba(188, 229, 251, 0.75);
+  box-shadow: 0 0 25px rgba(188, 229, 251, 0.75);
   background-image: url(../assets/img/svg/nephrolitithiasis.svg), linear-gradient(180deg, #F0F83C -10.73%, #2FA02D 118.64%);
   background-repeat: no-repeat;
   background-position: center;
@@ -3200,7 +3218,6 @@ body {
 
 .related-post .card-post__date {
   font-size: 13px;
-  font-family: "Gilroy", sans-serif;
 }
 
 .related-post .card-post__thumb {

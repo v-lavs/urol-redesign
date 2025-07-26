@@ -10,14 +10,13 @@
   background-repeat: no-repeat;
 
 
-
   &__heading {
     font-size: 64px;
     color: variables.$blue-100;
   }
 
   .col-4 {
-    background-image:url(../assets/img/round-point.png);
+    background-image: url(../assets/img/round-point.png);
     background-repeat: no-repeat;
     background-position: right center;
     background-size: contain;
@@ -33,36 +32,37 @@
 
     flex-grow: 1;
   }
-  @include mixins.respond-to(variables.$lg){
+
+  @include mixins.respond-to(variables.$lg) {
     &__heading {
       font-size: 44px;
     }
   }
-  @include mixins.respond-to(variables.$sm){
+  @include mixins.respond-to(variables.$sm) {
     &__heading {
       text-align: center;
     }
-    .d_flex{
+    .d_flex {
       flex-direction: column;
     }
     .col-8,
-   .col-4{
+    .col-4 {
       width: 100%;
     }
-    .col-4{
+    .col-4 {
       min-height: 0;
       padding-top: 50px;
       margin-bottom: 70px;
       background: none;
     }
   }
-  @include mixins.respond-to(variables.$xs){
+  @include mixins.respond-to(variables.$xs) {
 
     &__heading {
       font-size: 36px;
       margin-bottom: 46px;
     }
-    .col-4{
+    .col-4 {
       padding: 0;
       margin: 0;
     }
@@ -75,7 +75,8 @@
     max-width: 514px;
     display: flex;
     font-size: 22px;
-    &:nth-child(2){
+
+    &:nth-child(2) {
       margin-bottom: 150px;
       margin-top: 150px;
       margin-left: 63px;
@@ -92,22 +93,18 @@
     line-height: 1;
     padding-bottom: 5px;
     margin-bottom: 5px;
-   &:before{
-     position: absolute;
-     content: '';
-     bottom: 0;
-     left: 0;
-     width: 67px;
-     height: 1px;
-     border-width: 1px;
-     border-style: solid;
-     border-image:
-             linear-gradient(
-                             to right,
-                             variables.$blue-100,
-                             rgba(0, 0, 0, 0)
-             ) 0 1 100%;
-   }
+
+    &:before {
+      position: absolute;
+      content: '';
+      bottom: 0;
+      left: 0;
+      width: 67px;
+      height: 1px;
+      border-width: 1px;
+      border-style: solid;
+      border-image: linear-gradient(to right, variables.$blue-100, rgba(0, 0, 0, 0)) 0 1 100%;
+    }
   }
 
   &__icon {
@@ -118,22 +115,24 @@
     height: 116px;
     flex-shrink: 0;
   }
-  @include mixins.respond-to(variables.$lg){
+
+  @include mixins.respond-to(variables.$lg) {
     &__content {
       padding-left: 40px;
     }
   }
-  @include mixins.respond-to(variables.$sm){
+  @include mixins.respond-to(variables.$sm) {
     &__item {
       margin-bottom: 100px;
-      &:nth-child(2){
+
+      &:nth-child(2) {
         margin-top: 0;
         margin-left: 0;
         margin-bottom: 100px;
       }
     }
   }
-  @include mixins.respond-to(variables.$xs){
+  @include mixins.respond-to(variables.$xs) {
     &__item {
       max-width: 300px;
       width: 80%;
@@ -141,22 +140,24 @@
       flex-direction: column;
       text-align: center;
       font-size: 16px;
-      &:nth-child(2){
+
+      &:nth-child(2) {
         margin: 0 auto 30px;
       }
     }
-    &__icon{
+    &__icon {
       width: 125px;
       height: 136px;
       margin: 0 auto 25px;
     }
-    &__content{
+    &__content {
       padding: 0;
     }
     &__title {
       line-height: 1;
       font-size: 20px;
-      &:before{
+
+      &:before {
         display: none;
       }
     }

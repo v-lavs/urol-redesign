@@ -19,25 +19,51 @@
     align-items: center;
     z-index: 2;
   }
+
   .bg_frosted {
     position: relative;
-    border: 1px solid variables.$white;
+    border: 1px solid variables.$green;
     border-radius: 16px;
     padding: 20px 24px;
     overflow: hidden;
     background-color: transparent;
 
-       &:before {
-
+    &:before {
       position: absolute;
       content: '';
       top: 0;
       bottom: 0;
       left: 0;
       right: 0;
-      background: rgba(255, 255, 255, 0.2);
+      background: rgba(63, 165, 53, 0.1);
       backdrop-filter: blur(16px);
       z-index: -1;
+    }
+  }
+
+  &_home {
+    .menu{
+      color: variables.$white;
+    }
+    .bg_frosted {
+      border: 1px solid variables.$green;
+
+      &:before {
+        background: rgba(255, 255, 255, 0.2);
+      }
+    }
+
+    &.active {
+      .menu{
+        color: #4d594c;
+      }
+      .bg_frosted {
+        border: 1px solid variables.$white;
+
+        &:before {
+          background: rgba(63, 165, 53, 0.1);
+        }
+      }
     }
   }
 
@@ -49,7 +75,8 @@
   &__logo {
     display: block;
     max-width: 160px;
-    img{
+
+    img {
       display: block;
       width: 100%;
     }
@@ -96,30 +123,30 @@
     display: none;
   }
 
-  .btn_buy{
+  .btn_buy {
     display: flex;
     align-items: center;
-    font-family: variables.$main-font;
     font-size: 16px;
     color: #fff;
     box-shadow: 0 4px 13px 0 #3fa535;
     padding: 12px 24px;
     position: relative;
     z-index: 1;
-     background-image: linear-gradient(135deg, #3fa535 0%, #c8e514 100%),
+    background-image: linear-gradient(135deg, #3fa535 0%, #c8e514 100%),
     linear-gradient(to right, #ffffff, #c8e514);
     background-origin: border-box;
     background-clip: padding-box, border-box;
     border: 1px solid transparent;
 
-    img{
+    img {
       width: 32px;
       display: block;
       margin-right: 16px;
     }
+
     &:hover,
     &:focus {
-      background: linear-gradient(135deg, #c8e514  0%, #3fa535 100%);
+      background: linear-gradient(135deg, #c8e514 0%, #3fa535 100%);
     }
   }
 
@@ -146,6 +173,7 @@
 
     .header__logo-site {
       max-width: 75px;
+
       img {
         vertical-align: middle;
       }
@@ -159,7 +187,8 @@
     &__logo {
       padding-right: 0;
       max-width: 113px;
-      &:after{
+
+      &:after {
         display: none;
       }
     }
@@ -188,6 +217,7 @@
         align-items: start;
         font-size: 18px;
         color: #1e1e1e;
+
         &__item {
           margin-bottom: 10px;
           padding-left: 0;
