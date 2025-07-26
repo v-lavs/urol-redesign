@@ -5,12 +5,14 @@
   display: flex;
   justify-content: center;
   width: 100%;
-  font-size: 18px;
+  font-size: 16px;
+  font-weight: 500;
   align-items: center;
   line-height: 1;
-  color: variables.$black-blue;
+  color: variables.$white;
+  margin: 0 18px;
   &__item {
-    padding: 5px 22px;
+    padding: 5px 12px;
     text-align: center;
   }
 
@@ -20,8 +22,7 @@
 
     &:hover,
     &:focus {
-      -webkit-text-stroke: .5px variables.$black-blue;
-      text-shadow: 0 0 2px #D8E7F2;
+      color: #1e1e1e;
     }
   }
 }
