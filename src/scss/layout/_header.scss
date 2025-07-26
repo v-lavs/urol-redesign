@@ -43,6 +43,7 @@
 
   &__nav {
     flex-grow: 1;
+    margin: 0 18px;
   }
 
   &__logo {
@@ -65,9 +66,9 @@
     .line {
       display: block;
       width: 24px;
-      height: 1px;
-      margin-bottom: 7px;
-      background-color: variables.$black-blue;
+      height: 2px;
+      margin-bottom: 5px;
+      background-color: variables.$white;
 
       &:last-child {
         margin-bottom: 0;
@@ -102,12 +103,9 @@
     font-size: 16px;
     color: #fff;
     box-shadow: 0 4px 13px 0 #3fa535;
-    //background: linear-gradient(135deg, #3fa535 0%, #c8e514 100%);
     padding: 12px 24px;
-
     position: relative;
     z-index: 1;
-
      background-image: linear-gradient(135deg, #3fa535 0%, #c8e514 100%),
     linear-gradient(to right, #ffffff, #c8e514);
     background-origin: border-box;
@@ -139,9 +137,6 @@
     }
     &__nav {
       text-align: center;
-    }
-    .menu {
-      font-size: 15px;
     }
   }
   @include mixins.respond-to(variables.$lg) {
@@ -192,7 +187,7 @@
         flex-direction: column;
         align-items: start;
         font-size: 18px;
-
+        color: #1e1e1e;
         &__item {
           margin-bottom: 10px;
           padding-left: 0;

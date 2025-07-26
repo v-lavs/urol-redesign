@@ -10,7 +10,6 @@
   align-items: center;
   line-height: 1;
   color: variables.$white;
-  margin: 0 18px;
   &__item {
     padding: 5px 12px;
     text-align: center;
@@ -28,7 +27,9 @@
 }
 
 @include mixins.respond-to(variables.$md) {
-
+  .menu{
+    color: #1e1e1e;
+  }
     .menu__item {
       padding-left: 16px;
       padding-right: 16px;

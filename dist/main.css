@@ -1150,7 +1150,6 @@ body {
   align-items: center;
   line-height: 1;
   color: #ffffff;
-  margin: 0 18px;
 }
 
 .menu__item {
@@ -2132,6 +2131,7 @@ body {
 
 .header__nav {
   flex-grow: 1;
+  margin: 0 18px;
 }
 
 .header__logo {
@@ -2156,9 +2156,9 @@ body {
 .header .btn-burger .line {
   display: block;
   width: 24px;
-  height: 1px;
-  margin-bottom: 7px;
-  background-color: #24243F;
+  height: 2px;
+  margin-bottom: 5px;
+  background-color: #ffffff;
 }
 
 .header .btn-burger .line:last-child {
@@ -3950,25 +3950,6 @@ body {
   padding-top: 134px;
 }
 
-@media only screen and (max-width: 1480px) {
-  .container {
-    max-width: 1200px;
-    background-color: red;
-  }
-
-  .section-banner__slogan {
-    font-size: 54px;
-  }
-
-  .section-slider .slide-about .counter-slide {
-    font-size: 70px;
-  }
-
-  .members-list__item {
-    padding-top: 57%;
-  }
-}
-
 @media all and (max-width: 1480px) {
   .section-slider .slide-about {
     width: 65%;
@@ -4010,6 +3991,25 @@ body {
   }
 }
 
+@media only screen and (max-width: 1440px) {
+  .container {
+    max-width: 1200px;
+    background-color: red;
+  }
+
+  .section-banner__slogan {
+    font-size: 54px;
+  }
+
+  .section-slider .slide-about .counter-slide {
+    font-size: 70px;
+  }
+
+  .members-list__item {
+    padding-top: 57%;
+  }
+}
+
 @media only screen and (max-width: 1350px) {
   .diagnoses-list__item {
     padding-top: 40px;
@@ -4043,10 +4043,6 @@ body {
 
   .header__nav {
     text-align: center;
-  }
-
-  .header .menu {
-    font-size: 15px;
   }
 
   .page-composition .col-4,
@@ -4340,6 +4336,10 @@ body {
     font-size: 18px;
   }
 
+  .menu {
+    color: #1e1e1e;
+  }
+
   .menu__item {
     padding-left: 16px;
     padding-right: 16px;
@@ -4469,6 +4469,7 @@ body {
     flex-direction: column;
     align-items: start;
     font-size: 18px;
+    color: #1e1e1e;
   }
 
   .header__nav .menu__item {
