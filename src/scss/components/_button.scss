@@ -17,13 +17,12 @@
     color: variables.$white;
     position: relative;
     background-clip: padding-box;
-    background: #3fa535;
+    background: variables.$green-200;
     transition: .5s;
 
     &:hover,
     &:focus {
-      background: variables.$white;
-      color: variables.$green;
+      background-color: variables.$green;
     }
   }
 
@@ -31,84 +30,39 @@
     border: 1px solid #3fa535;
     background-color: #ffffff;
     color: #3fa535;
-
-    //&:hover,
-    //&:focus {
-    //  background-color: variables.$white;
-    //}
-  }
-  //
-  //&_glass {
-  //  border: 1px solid #FFFFFF;
-  //  background-color: transparent;
-  //  color: #ffffff;
-  //
-  //  &:hover,
-  //  &:focus {
-  //  }
-  //}
-
-
-
-  @include mixins.respond-to(variables.$xl){
-    min-width: 225px;
-    padding: 18px 20px 19px;
-  }
-  @include
-  mixins.respond-to(variables.$sm){
-    min-width: 208px;
-    font-size: 14px;
-    padding: 15px 20px 16px;
+    &:hover,
+    &:focus {
+      background-color:  variables.$green-200;
+      color: variables.$white;
+    }
   }
 }
 
 .round {
-  border: none;
   position: relative;
   border-radius: 50%;
-  width: 80px;
-  height: 80px;
-  background-image: linear-gradient(-270deg, #F0F83C -10.73%, #59CE57 118.64%);
+  border: 8px solid #edf8ed;
+  width: 64px;
+  height: 64px;
+  background-color: #c8e514;
   cursor: pointer;
   transition: .35s;
 
-  &:after,
-  &:before {
+  &:after {
     position: absolute;
     content: '';
     left: 50%;
     top: 50%;
-    transform: translate(-50%, -50%);
-  }
-
-  &:before {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    z-index: 0;
-    background-image: linear-gradient(-270deg, #F0F83C, #59CE57);
-    opacity: .35;
-  }
-
-  &:after {
-    width: 24px;
-    height: 24px;
+    transform: translate(-50%, -50%) rotate(0);
+    width: 32px;
+    height: 32px;
     display: block;
     background-image: url(../assets/img/svg/plus2.svg);
     background-position: center;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: 32px 32px;
     z-index: 2;
-    transform: translate(-50%, -50%) rotate(45deg);
-  }
 
-  @include mixins.respond-to(variables.$sm){
-      width: 54px;
-      height: 54px;
-    &:before {
-      width: 68px;
-      height: 68px;
-    }
   }
 }
 

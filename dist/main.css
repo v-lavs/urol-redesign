@@ -1099,8 +1099,7 @@ body {
 
 .btn_main:hover,
 .btn_main:focus {
-  background: #ffffff;
-  color: #59CE57;
+  background-color: #59CE57;
 }
 
 .btn_outline {
@@ -1109,45 +1108,37 @@ body {
   color: #3fa535;
 }
 
+.btn_outline:hover,
+.btn_outline:focus {
+  background-color: #3fa535;
+  color: #ffffff;
+}
+
 .round {
-  border: none;
   position: relative;
   border-radius: 50%;
-  width: 80px;
-  height: 80px;
-  background-image: linear-gradient(-270deg, #F0F83C -10.73%, #59CE57 118.64%);
+  border: 8px solid #edf8ed;
+  width: 64px;
+  height: 64px;
+  background-color: #c8e514;
   cursor: pointer;
   transition: 0.35s;
 }
 
-.round:after,
-.round:before {
+.round:after {
   position: absolute;
   content: "";
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.round:before {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  z-index: 0;
-  background-image: linear-gradient(-270deg, #F0F83C, #59CE57);
-  opacity: 0.35;
-}
-
-.round:after {
-  width: 24px;
-  height: 24px;
+  transform: translate(-50%, -50%) rotate(0);
+  width: 32px;
+  height: 32px;
   display: block;
   background-image: url(../assets/img/svg/plus2.svg);
   background-position: center;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: 32px 32px;
   z-index: 2;
-  transform: translate(-50%, -50%) rotate(45deg);
 }
 
 .menu {
@@ -1618,7 +1609,7 @@ body {
 }
 
 .card-drug .trigger-popover.active:after {
-  transform: translate(-50%, -50%) rotate(0deg);
+  transform: translate(-50%, -50%) rotate(45deg);
 }
 
 .card-drug .trigger-popover.hide {
@@ -2107,6 +2098,15 @@ body {
   color: #ffffff;
 }
 
+.header .container-inner {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  align-items: center;
+  z-index: 2;
+}
+
 .header .bg_frosted {
   position: relative;
   border: 1px solid #ffffff;
@@ -2114,15 +2114,6 @@ body {
   padding: 20px 24px;
   overflow: hidden;
   background-color: transparent;
-}
-
-.header .bg_frosted .container-inner {
-  position: relative;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  z-index: 2;
 }
 
 .header .bg_frosted:before {
@@ -2145,6 +2136,11 @@ body {
 .header__logo {
   display: block;
   max-width: 160px;
+}
+
+.header__logo img {
+  display: block;
+  width: 100%;
 }
 
 .header .btn-burger {
@@ -2178,39 +2174,34 @@ body {
   transform: translateY(-50%);
 }
 
-.header .round:before {
-  width: 68px;
-  height: 68px;
-}
-
 .header .round:after {
-  transform: translate(-50%, -50%) rotate(0deg);
+  transform: translate(-50%, -50%) rotate(45deg);
 }
 
 .header__nav-bar {
   display: none;
 }
 
-.header .switch-lang {
-  margin-left: 20px;
-}
-
 .header .btn_buy {
   display: flex;
   align-items: center;
-  font-family: "Gotham", sans-serif;
+  font-family: "Calibri", sans-serif;
   font-size: 16px;
   color: #fff;
   box-shadow: 0 4px 13px 0 #3fa535;
   background: linear-gradient(135deg, #3fa535 0%, #c8e514 100%);
   padding: 12px 24px;
-  width: 149px;
 }
 
 .header .btn_buy img {
   width: 32px;
   display: block;
   margin-right: 16px;
+}
+
+.header .btn_buy:hover,
+.header .btn_buy:focus {
+  background: linear-gradient(135deg, #c8e514 0%, #3fa535 100%);
 }
 
 .backdrop {
@@ -3954,11 +3945,6 @@ body {
 }
 
 @media only screen and (max-width: 1480px) {
-  .btn {
-    min-width: 225px;
-    padding: 18px 20px 19px;
-  }
-
   .container {
     max-width: 1200px;
     background-color: red;
@@ -4796,22 +4782,6 @@ body {
 
   .heading_xxl {
     font-size: 39px;
-  }
-
-  .btn {
-    min-width: 208px;
-    font-size: 14px;
-    padding: 15px 20px 16px;
-  }
-
-  .round {
-    width: 54px;
-    height: 54px;
-  }
-
-  .round:before {
-    width: 68px;
-    height: 68px;
   }
 
   .pagination__prev {
