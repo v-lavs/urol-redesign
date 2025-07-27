@@ -12,7 +12,10 @@
   border-radius: 8px;
   border: none;
   padding: 16px 24px;
-
+  img {
+    width: 24px;
+    height: 24px;
+  }
   &_main {
     color: variables.$white;
     position: relative;
@@ -22,18 +25,37 @@
 
     &:hover,
     &:focus {
-      background-color: variables.$green;
+      background-color: #c8e514;
+      color: variables.$white;
+
     }
   }
 
   &_outline {
-    border: 1px solid #3fa535;
+    border: 1px solid variables.$green-200;
     background-color: #ffffff;
     color: #3fa535;
     &:hover,
     &:focus {
-      background-color:  variables.$green-200;
-      color: variables.$white;
+      border: 1px solid #c8e514;
+      background-color: #ffffff;
+      color: #c8e514;
+    }
+  }
+
+  &_secondary {
+    font-size: 20px;
+    font-weight: 500;
+    border: none;
+    border-radius: 100px;
+    padding: 12px 16px 12px 24px;
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+    &:hover,
+    &:focus {
+      border: 1px solid #c8e514;
+      background-color: #ffffff;
+      color: #c8e514;
     }
   }
 }

@@ -6,10 +6,12 @@
   max-width: 1200px;
   padding: 0 32px;
   margin: 0 auto;
-
+@media screen   and (min-width: 1441px){
+  background-color: red;
+}
   @include mixins.respond-to(variables.$xl){
     max-width: 1200px;
-    background-color: red;
+
   }
 
   @include mixins.respond-to(variables.$lg){

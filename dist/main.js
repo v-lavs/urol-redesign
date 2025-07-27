@@ -21505,32 +21505,9 @@ $(document).ready(function () {
 
     if ($('.about-urolesan').get(0)) {
         const aboutUrolesan = new Swiper(".about-urolesan", {
-            slidesPerView: 1.48,
-            spaceBetween: 66,
-            slidesOffsetBefore: 43,
+            slidesPerView: 1,
+            spaceBetween: 30,
             speed:3000,
-            breakpoints: {
-                320: {
-                    slidesPerView: 1.5,
-                    spaceBetween: 66,
-                    slidesOffsetBefore: 43,
-                },
-                680: {
-                    slidesPerView: 1.5,
-                    spaceBetween: 65,
-                    slidesOffsetBefore: 100,
-                },
-                1180: {
-                    slidesPerView: 'auto',
-                    spaceBetween: 60,
-                    slidesOffsetBefore: 100,
-                },
-                1340: {
-                    slidesPerView: 'auto',
-                    spaceBetween: 0,
-                    slidesOffsetBefore: 230,
-                },
-            },
             pagination: {
                 el: ".swiper-pagination",
                 clickable: true,

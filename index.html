@@ -82,26 +82,16 @@
 
     <div class="backdrop"></div>
     <main class="main  home">
-        <section class=" section-banner" style="background-image: url(assets/img/hero-section-bg.jpg);">
-            <div class="bg-effect" style="background-image: url(assets/img/2.png);">
-                <div class="bg-effect-gif"></div>
-                <div class="bg-effect-1"></div>
-                <div class="bg-window"></div>
+        <section class="section-banner" style="background-image: url(assets/img/hero-section-bg.jpg);">
+            <div class="wrap-img">
+                <img class="tablet" src="assets/img/banner-img1.png" alt="">
             </div>
             <div class="container">
                 <div class="section-banner__slogan">
-                    <span class="text-big text_uppercase">ПРОГРЕСИВНИЙ</span>
-                    <span class="text-huge">погляд</span><br>
-                    на можливості <br>
-                    природи
+                    Прогресивний погляд на можливості природи
                 </div>
-                <button class="btn btn_main">Детальніше про препарат</button>
-            </div>
-            <div class="wrap-img">
-                <img class="tablet" src="assets/img/tablet-1.png" alt="">
-
-                <img class="hand" src="assets/img/hand-right-1.png" alt="">
-
+                <a href="#history" class="btn">Детальніше про препарат <img src="assets/img/svg/arrow-down.svg" alt=""></a>
+                <img class="tovar" src="assets/img/package1.png" alt="">
             </div>
         </section>
 
@@ -110,13 +100,11 @@
             <div class="buy">Купити</div>
         </a>
 
-        <section class="section-help" style="background-image: url(assets/img/bg-soty.png);">
+        <section class="section-help">
             <div class="container">
                 <div class="section__heading color_white">
-                    <div class="wrap-content">
-                        <h2 class="section__title">Коли може допомогти</h2>
-                        <span class="big">Уролесан <sup>&#174;</sup></span>
-                    </div>
+                    <h2 class="section__title">Коли може допомогти</h2>
+                    <span class="big">Уролесан <sup>&#174;</sup></span>
                 </div>
                 <ul class="diagnoses-list">
                     <li class="diagnoses-list__item">
@@ -124,12 +112,8 @@
                             <img src="assets/img/bladder.png" alt="" class="diagnoses-list__img">
                             <span class="pulse"></span>
                         </div>
-
                         <h3 class="diagnoses-list__title"><span class="text">ЦИСТИТ</span></h3>
-
-                        <div class="wrap-btn">
-                            <a href="cystitis.html" class="btn btn_main">Детальніше</a>
-                        </div>
+                        <a href="cystitis.html" class="btn btn_secondary">Детальніше<img src="assets/img/svg/arrow-down.svg" alt=""></a>
                     </li>
                     <li class="diagnoses-list__item">
                         <div class="diagnoses-list__thumb">
@@ -138,9 +122,7 @@
                         </div>
                         <h3 class="diagnoses-list__title">
                             <span class="text">ПІСОК <br> У НИРКАХ</span></h3>
-                        <div class="wrap-btn">
-                            <a href="sand-kidney.html" class="btn btn_main">Детальніше</a>
-                        </div>
+                        <a href="sand-kidney.html" class="btn btn_secondary">Детальніше<img src="assets/img/svg/arrow-down.svg" alt=""></a>
                     </li>
                     <li class="diagnoses-list__item">
                         <div class="diagnoses-list__thumb">
@@ -150,9 +132,7 @@
                         <h3 class="diagnoses-list__title">
                             <span class="text">СЕЧОКАМ’ЯНА ХВОРОБА</span>
                         </h3>
-                        <div class="wrap-btn">
-                            <a href="urolithiasis.html" class="btn btn_main">Детальніше</a>
-                        </div>
+                        <a href="urolithiasis.html" class="btn btn_secondary">Детальніше<img src="assets/img/svg/arrow-down.svg" alt=""></a>
                     </li>
                     <li class="diagnoses-list__item">
                         <div class="diagnoses-list__thumb">
@@ -160,17 +140,17 @@
                             <span class="pulse"></span>
                         </div>
                         <h3 class="diagnoses-list__title"><span class="text">ПІЄЛОНЕФРИТ</span></h3>
-                        <div class="wrap-btn">
-                            <a href="pyelonephritis.html" class="btn btn_main">Детальніше</a>
-                        </div>
-
+                        <a href="pyelonephritis.html" class="btn btn_secondary">Детальніше<img src="assets/img/svg/arrow-down.svg" alt=""></a>
                     </li>
                 </ul>
+                <div class="promo-video">
+                    <iframe loading="lazy" width="800" height="460" src="https://www.youtube.com/embed/znQdZaC1VeE?enablejsapi=1&amp;origin=https%3A%2F%2Furolesan.com" title="УРОЛЕСАН" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" data-rocket-lazyload="fitvidscompatible" class="lazyloaded" data-ll-status="loaded" data-gtm-yt-inspected-56555048_18="true" id="923975940" data-gtm-yt-inspected-14="true"></iframe><noscript><iframe width="800" height="460" src="https://www.youtube.com/embed/znQdZaC1VeE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></noscript>
+                </div>
             </div>
         </section>
 
-        <section class="section-slider">
-            <div class="wrapper-slider">
+        <section id="history" class="section-slider">
+            <div class="container">
                 <div class="swiper-container about-urolesan">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide slide-about">
@@ -206,6 +186,7 @@
                                 <img src="assets/img/3.gif" alt="">
                             </div>
                         </div>
+
                     </div>
                     <div class="swiper-pagination"></div>
                 </div>
@@ -506,7 +487,7 @@
         <div class="disclaimer frosted">
             <picture>
                 <source srcset="assets/img/svg/disclaimer-mob.svg" media="(max-width: 580px)">
-                <img class="footer__text-img" src="assets/img/svg/disclaimer.svg"
+                <img class="footer__text-img" src="assets/img/svg/disclaimer-desk-large.svg"
                      alt="Самолікування може бути шкідливим для вашого здоров'я">
             </picture>
 
