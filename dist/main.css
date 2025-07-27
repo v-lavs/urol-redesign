@@ -2365,8 +2365,6 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  padding-top: 124px;
-  padding-bottom: calc(16vh + 8px);
 }
 
 .section-banner .container {
@@ -2376,6 +2374,8 @@ body {
   position: relative;
   padding-left: 41%;
   height: 100%;
+  padding-top: 124px;
+  padding-bottom: calc(16vh + 8px);
 }
 
 .section-banner .btn {
@@ -2387,7 +2387,7 @@ body {
   padding: 16px;
   font-weight: 500;
   right: 0;
-  bottom: 0;
+  bottom: 8px;
   background: radial-gradient(circle, #3FA535 0%, transparent 100%);
   color: #ffffff;
   z-index: 1;
@@ -2429,7 +2429,7 @@ body {
 
 .diagnoses-list__item {
   position: relative;
-  width: calc(25% - 16px);
+  width: 100%;
   flex-shrink: 0;
   margin: 0 6px;
   padding: 32px 24px 24px;
@@ -2452,9 +2452,9 @@ body {
 .diagnoses-list__item .btn {
   display: block;
   position: relative;
-  width: 100%;
-  min-width: 0;
+  max-width: 180px;
   z-index: 1;
+  margin: 0 auto;
 }
 
 .diagnoses-list__item:first-child .pulse {
@@ -2483,6 +2483,11 @@ body {
   padding-bottom: 15px;
 }
 
+.diagnoses-list__wrap {
+  height: 374px;
+  width: calc(25% - 16px);
+}
+
 .diagnoses-list__thumb {
   position: relative;
   display: flex;
@@ -2491,7 +2496,7 @@ body {
   align-items: center;
   overflow: hidden;
   opacity: 0;
-  transition: height 0.25s;
+  transition: height 0.25s, opacity 0.5s;
 }
 
 .diagnoses-list__thumb:before {
