@@ -29,7 +29,7 @@
     padding: 16px;
     font-weight: 500;
     right: 0;
-    bottom: 8px;
+    bottom: calc(16vh + 8px);
     background: radial-gradient(circle, #3FA535 0%, transparent 100%);
     color: #ffffff;
     z-index: 1;

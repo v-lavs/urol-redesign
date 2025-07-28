@@ -7,7 +7,7 @@
 
   .bg-section {
     position: relative;
-    padding-top: 188px;
+    padding-top: 40px;
   }
 
   .pills {
@@ -75,11 +75,7 @@
   }
 
   .section__heading {
-    margin-bottom: 46px;
-
-    &:after {
-      border-image: linear-gradient(to right, rgba(59, 178, 57, 0), #3BB239, rgba(59, 178, 57, 0)) 0 0 100% 0;
-    }
+    margin-bottom: 64px;
   }
 
   .section__text {
@@ -94,40 +90,40 @@
   .drugs-list {
     max-width: 1122px;
     display: flex;
-    flex-wrap: wrap;
     margin: 0 auto 110px;
+    gap: 16px;
 
     &__item {
       width: 33.33%;
     }
   }
 
-  @media all and (max-width: 1480px) {
-    .pills {
-
-      &-3 {
-        width: 107px;
-        height: 80px;
-        right: -1.5%;
-      }
-
-      &-4 {
-        width: 189px;
-        height: 178px;
-        left: -5.5%;
-      }
-
-    }
-    .pills-bg-l {
-      width: 109px;
-      height: 161px;
-    }
-    .pills-bg-r {
-      width: 99px;
-      height: 168px;
-      bottom: 18%;
-    }
-  }
+  //@media all and (max-width: 1480px) {
+  //  .pills {
+  //
+  //    &-3 {
+  //      width: 107px;
+  //      height: 80px;
+  //      right: -1.5%;
+  //    }
+  //
+  //    &-4 {
+  //      width: 189px;
+  //      height: 178px;
+  //      left: -5.5%;
+  //    }
+  //
+  //  }
+  //  .pills-bg-l {
+  //    width: 109px;
+  //    height: 161px;
+  //  }
+  //  .pills-bg-r {
+  //    width: 99px;
+  //    height: 168px;
+  //    bottom: 18%;
+  //  }
+  //}
 
   @include mixins.respond-to(variables.$md) {
     .bg-section {

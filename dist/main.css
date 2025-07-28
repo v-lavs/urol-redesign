@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 /**
  * Swiper 7.0.3
  * Most modern mobile touch slider and framework with hardware accelerated transitions
@@ -800,7 +802,7 @@ body {
   font: 400 18px "Gilroy", sans-serif;
   height: 100%;
   color: #4d594c;
-  background-color: #f5f7f7;
+  background-color: #ffffff;
 }
 
 .body_bg {
@@ -869,7 +871,7 @@ body {
 }
 
 .color_green {
-  color: #3BB239;
+  color: #3fa535;
 }
 
 .section__heading {
@@ -878,6 +880,7 @@ body {
   flex-direction: column;
   align-items: center;
   padding-bottom: 24px;
+  text-align: center;
 }
 
 .section__heading .big {
@@ -928,6 +931,10 @@ body {
   line-height: 1;
   color: #ffffff;
   text-align: center;
+}
+
+.block-buy .promo-video {
+  margin: 0 auto;
 }
 
 .dynamic-content p {
@@ -1532,7 +1539,6 @@ body {
 .card-drug {
   max-width: 374px;
   width: 100%;
-  padding: 0 37px;
 }
 
 .card-drug__header {
@@ -2064,9 +2070,49 @@ body {
   color: #ffffff;
 }
 
+.promo-video {
+  position: relative;
+  width: 100%;
+  max-width: 848px;
+  padding-top: 54.95%;
+  /* точно для висоти 466px при ширині 848px */
+  height: 0;
+  overflow: hidden;
+  background-color: #000;
+  border-radius: 16px;
+  margin: 0 auto;
+}
+
+.promo-video iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  border-radius: 16px;
+}
+
+.promo-video__poster {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 1;
+  transition: opacity 0.3s ease;
+}
+
 .container {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1464px;
   padding: 0 32px;
   margin: 0 auto;
 }
@@ -2387,7 +2433,7 @@ body {
   padding: 16px;
   font-weight: 500;
   right: 0;
-  bottom: 8px;
+  bottom: calc(16vh + 8px);
   background: radial-gradient(circle, #3FA535 0%, transparent 100%);
   color: #ffffff;
   z-index: 1;
@@ -2441,6 +2487,7 @@ body {
   top: 0;
   left: 0;
   right: 0;
+  height: 216px;
   content: "";
   display: block;
   width: 100%;
@@ -2477,10 +2524,16 @@ body {
   top: 35%;
 }
 
+.diagnoses-list__item:hover:before {
+  height: 100%;
+}
+
 .diagnoses-list__item:hover .diagnoses-list__thumb {
   opacity: 1;
-  height: 164px;
-  padding-bottom: 15px;
+}
+
+.diagnoses-list__item:hover .dl-footer {
+  transform: translateY(0);
 }
 
 .diagnoses-list__wrap {
@@ -2491,7 +2544,8 @@ body {
 .diagnoses-list__thumb {
   position: relative;
   display: flex;
-  height: 0;
+  height: 160px;
+  padding: 10px 0;
   justify-content: center;
   align-items: center;
   overflow: hidden;
@@ -2504,8 +2558,8 @@ body {
   content: "";
   left: 0;
   right: 0;
-  bottom: 15px;
-  top: -15px;
+  bottom: 0;
+  top: 0;
   background-image: url(../assets/img/bg-card-diagnose3.png);
   background-position: center;
   background-repeat: no-repeat;
@@ -2545,6 +2599,12 @@ body {
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
   }
+}
+
+.dl-footer {
+  padding-top: 16px;
+  transform: translateY(calc(-100% - 16px));
+  transition: 1s;
 }
 
 .pulse {
@@ -2615,7 +2675,7 @@ body {
 
 .section-slider {
   position: relative;
-  background: linear-gradient(180deg, #c8e514 0%, #fff 100%);
+  background: linear-gradient(180deg, #c8e514 0%, #fff 50%);
   padding-top: 40px;
   padding-bottom: 80px;
 }
@@ -2626,6 +2686,10 @@ body {
 
 .section-slider .about-urolesan {
   padding-bottom: 50px;
+}
+
+.section-slider .about-urolesan .swiper-pagination {
+  bottom: 80px;
 }
 
 .section-slider .slide-about {
@@ -3293,7 +3357,7 @@ body {
 
 .selection-drug .bg-section {
   position: relative;
-  padding-top: 188px;
+  padding-top: 40px;
 }
 
 .selection-drug .pills {
@@ -3361,12 +3425,7 @@ body {
 }
 
 .selection-drug .section__heading {
-  margin-bottom: 46px;
-}
-
-.selection-drug .section__heading:after {
-  -o-border-image: linear-gradient(to right, rgba(59, 178, 57, 0), #3BB239, rgba(59, 178, 57, 0)) 0 0 100% 0;
-  border-image: linear-gradient(to right, rgba(59, 178, 57, 0), #3BB239, rgba(59, 178, 57, 0)) 0 0 100% 0;
+  margin-bottom: 64px;
 }
 
 .selection-drug .section__text {
@@ -3381,8 +3440,8 @@ body {
 .selection-drug .drugs-list {
   max-width: 1122px;
   display: flex;
-  flex-wrap: wrap;
   margin: 0 auto 110px;
+  gap: 16px;
 }
 
 .selection-drug .drugs-list__item {
@@ -3954,40 +4013,9 @@ body {
   padding-top: 134px;
 }
 
-@media screen and (min-width: 1441px) {
-  .container {
-    background-color: red;
-  }
-}
-
-@media all and (max-width: 1480px) {
-  .selection-drug .pills-3 {
-    width: 107px;
-    height: 80px;
-    right: -1.5%;
-  }
-
-  .selection-drug .pills-4 {
-    width: 189px;
-    height: 178px;
-    left: -5.5%;
-  }
-
-  .selection-drug .pills-bg-l {
-    width: 109px;
-    height: 161px;
-  }
-
-  .selection-drug .pills-bg-r {
-    width: 99px;
-    height: 168px;
-    bottom: 18%;
-  }
-}
-
 @media only screen and (max-width: 1440px) {
   .container {
-    max-width: 1200px;
+    max-width: 1280px;
   }
 
   .members-list__item {
