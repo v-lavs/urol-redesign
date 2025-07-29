@@ -2,21 +2,26 @@
 @use "../utils/variables";
 
 .card-drug {
-  max-width: 374px;
+  max-width: 368px;
   width: 100%;
-  //padding: 0 37px;
-
+  border: 1px solid rgba(63, 165, 53, 0.5);
+  border-radius: 8px;
+  padding: 32px 0 24px;
+  backdrop-filter: blur(16px);
+  box-shadow: 0 16px 24px -8px rgba(63, 165, 53, 0.15);
+  background: #fff;
   &__header {
     text-align: center;
     margin-bottom: 18px;
-
+    font-weight: 500;
     .big {
       display: inline-block;
       font-size: 38px;
-      line-height: .6;
+      line-height: .9;
+      color: #3fa535;
 
       sup {
-        vertical-align: baseline;
+        font-size: 18px;
         margin-left: -0.35em;
       }
     }
@@ -24,16 +29,9 @@
 
   &__img-wrap {
     position: relative;
-    border-radius: 15px;
-    background: rgba(255, 255, 255, 0.15);
-    padding-top: 100%;
-    width: 300px;
-    margin: 0 auto 24px;
-    transition: box-shadow .35s;
-
-    &:hover {
-      box-shadow: 0 0 25px 0 #BCE5FB;
-    }
+    padding-top: 76%;
+    width: 100%;
+    margin: 0 0 16px;
   }
 
   &__img {
@@ -50,7 +48,7 @@
   }
 
   &__footer {
-    text-align: center;
+    padding: 0 24px;
   }
 
   .wrap-btn {
@@ -77,8 +75,8 @@
   }
 
   .btn {
-    margin-bottom: 10px;
-
+    margin-bottom: 8px;
+    width: 100%;
     &:last-child {
       margin-bottom: 0;
     }

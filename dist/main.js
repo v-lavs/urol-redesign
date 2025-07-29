@@ -21467,11 +21467,12 @@ function destroySwiper(sliderInstance) {
 }
 
 function youtubeVideo() {
-    $('#customPlaybtn').on('click', function (e) {
+    $(document).on('click', '.custom-play-btn', function (e) {
         e.preventDefault();
 
         const videoUrl = $(this).data('iframe');
         const container = $(this).closest('.promo-video');
+        const aspectBox = container.find('.aspect-box');
 
         const iframe = $('<iframe>', {
             src: videoUrl,
@@ -21479,14 +21480,12 @@ function youtubeVideo() {
             allowfullscreen: true
         });
 
-        container.append(iframe);
-        $(this).parent().fadeOut(500);
+        aspectBox.empty().append(iframe);
+        $(this).parent().fadeOut(500); // ховаємо постер
     });
 }
 
-
 $(document).ready(function () {
-
     youtubeVideo();
 
     //MOBILE MENU
@@ -21733,28 +21732,28 @@ $(document).ready(function () {
             }
         });
     }
-
-    document.addEventListener('DOMContentLoaded', () => {
-        const videoOverlay = document.getElementById('promoVideoOverlay');
-        const videoIframe = document.getElementById('promoVideoIframe');
-        const videoId = videoOverlay.dataset.videoId;
-
-        if (videoId) {
-            videoOverlay.style.backgroundImage = `url('https://img.youtube.com/vi/${videoId}/maxresdefault.jpg')`;
-            videoOverlay.onerror = function() {
-                this.style.backgroundImage = `url('https://img.youtube.com/vi/${videoId}/hqdefault.jpg')`;
-            };
-        }
-
-
-        videoOverlay.addEventListener('click', () => {
-            if (videoId) {
-
-                videoIframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&showinfo=0&modestbranding=1`;
-                videoOverlay.classList.add('hidden');
-            }
-        });
-    });
+    //
+    // document.addEventListener('DOMContentLoaded', () => {
+    //     const videoOverlay = document.getElementById('promoVideoOverlay');
+    //     const videoIframe = document.getElementById('promoVideoIframe');
+    //     const videoId = videoOverlay.dataset.videoId;
+    //
+    //     if (videoId) {
+    //         videoOverlay.style.backgroundImage = `url('https://img.youtube.com/vi/${videoId}/maxresdefault.jpg')`;
+    //         videoOverlay.onerror = function() {
+    //             this.style.backgroundImage = `url('https://img.youtube.com/vi/${videoId}/hqdefault.jpg')`;
+    //         };
+    //     }
+    //
+    //
+    //     videoOverlay.addEventListener('click', () => {
+    //         if (videoId) {
+    //
+    //             videoIframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&showinfo=0&modestbranding=1`;
+    //             videoOverlay.classList.add('hidden');
+    //         }
+    //     });
+    // });
 });
 
 

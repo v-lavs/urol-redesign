@@ -88,42 +88,43 @@
   }
 
   .drugs-list {
-    max-width: 1122px;
+    max-width: 1136px;
+    width: 100%;
     display: flex;
+    justify-content: space-between;
     margin: 0 auto 110px;
-    gap: 16px;
 
     &__item {
-      width: 33.33%;
+      width: calc(33.33% - 16px);
     }
   }
 
-  //@media all and (max-width: 1480px) {
-  //  .pills {
-  //
-  //    &-3 {
-  //      width: 107px;
-  //      height: 80px;
-  //      right: -1.5%;
-  //    }
-  //
-  //    &-4 {
-  //      width: 189px;
-  //      height: 178px;
-  //      left: -5.5%;
-  //    }
-  //
-  //  }
-  //  .pills-bg-l {
-  //    width: 109px;
-  //    height: 161px;
-  //  }
-  //  .pills-bg-r {
-  //    width: 99px;
-  //    height: 168px;
-  //    bottom: 18%;
-  //  }
-  //}
+  @media all and (max-width: 1480px) {
+    .pills {
+
+      &-3 {
+        width: 107px;
+        height: 80px;
+        right: -1.5%;
+      }
+
+      &-4 {
+        width: 189px;
+        height: 178px;
+        left: -5.5%;
+      }
+
+    }
+    .pills-bg-l {
+      width: 109px;
+      height: 161px;
+    }
+    .pills-bg-r {
+      width: 99px;
+      height: 168px;
+      bottom: 18%;
+    }
+  }
 
   @include mixins.respond-to(variables.$md) {
     .bg-section {

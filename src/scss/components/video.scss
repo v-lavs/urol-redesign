@@ -1,13 +1,11 @@
 .promo-video {
-  position: relative;
   width: 100%;
   max-width: 848px;
-  padding-top: 54.95%; /* точно для висоти 466px при ширині 848px */
-  height: 0;
-  overflow: hidden;
-  background-color: #000;
-  border-radius: 16px;
   margin: 0 auto;
+  background: #000;
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
 }
 
 .promo-video iframe {
@@ -17,6 +15,12 @@
   height: 100%;
   border: 0;
   border-radius: 16px;
+}
+.aspect-box {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 */
+  height: 0;
 }
 
 .promo-video__poster {
@@ -31,5 +35,17 @@
   align-items: center;
   cursor: pointer;
   z-index: 1;
-  transition: opacity 0.3s ease;
+}
+
+.btn-play{
+  background: transparent;
+  border: none;
+  width: 64px;
+  height: 64px;
+  background-image: url('play-icon.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  z-index: 2;
 }

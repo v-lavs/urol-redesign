@@ -8,7 +8,7 @@
   margin: 0 auto;
 
   @include mixins.respond-to(variables.$xl){
-    max-width: 1280px;
+    max-width: 1200px;
   }
 
   @include mixins.respond-to(variables.$lg){
