@@ -6,7 +6,7 @@
 @use 'base/reset';
 @use 'base/base';
 @use 'base/typography';
-
+//
 @use 'components/button';
 @use 'components/nav';
 @use 'components/slider';
@@ -20,8 +20,6 @@
 @use 'components/prevention__list';
 @use 'components/popup';
 @use 'components/video';
-
-
 
 @use 'layout/layout';
 @use 'layout/grid';
@@ -37,7 +35,6 @@
 @use 'layout/sections/section-related-post';
 @use 'layout/sections/section-members';
 @use 'layout/sections/selection-drug';
-
 
 @use 'pages/blog';
 @use 'pages/single-article';
